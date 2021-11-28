@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{8ecb8da8-5ea3-4b13-a014-b41119526681}</ProjectGuid>
-    <RootNamespace>ejercicio9</RootNamespace>
+    <ProjectGuid>{e06efc48-d8fb-42a2-91b2-9d4a8829775f}</ProjectGuid>
+    <RootNamespace>stack</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,11 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="matematica(ej10).cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="matematica(ej10).h" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

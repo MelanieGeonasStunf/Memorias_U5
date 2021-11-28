@@ -2,7 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-extern char etext, edata, end;
+//extern char etext, edata, end;//para exportar datos
+
+ char* edata, end;
 
 int Suma(int a, int b);
 
@@ -11,11 +13,16 @@ int var2 = 123;
 
 int main()
 {
-	printf("----------------------------------\n");
+	char* etext;
+	char* palabra = new char;
+	palabra = 0;
+	edata = palabra;
+
+	printf("------------------ETEXT----------------\n");
 	printf("etext           %10p\n",&etext);//text  -> codigo
 	printf("Suma            %10p\n", &Suma);	
 	printf("main            %10p\n", &main);
-	printf("----------------------------------\n");
+	printf("----------------EDATA/DATA------------------\n");
 	printf("edata           %10p\n", &edata);//data -> inicializadas (Globales)
 	printf("var2            %10p\n", &var2);//inicializada mas cerca de edata
 	printf("----------------------------------\n");
@@ -31,7 +38,7 @@ int main()
 
 	printf("\n\n----------HEAP-------------------\n");
 	int* p_int;
-	p_int = new int;
+	p_int = new int;//p_int=malloc(sizeof(int));
 	printf("p_int           %10p\n", p_int);
 
 
